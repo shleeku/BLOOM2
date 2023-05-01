@@ -15,7 +15,11 @@ data_dir="/mldata2/cache/transformers/bloom/"
 
 and change this to specify which model/size you want to use:
 
+i.e.
+
 checkpoint = "bigscience/bloom-7b1"
+
+checkpoint = "bigscience/bloom-560m"
 
 
 (Ignore the following)
