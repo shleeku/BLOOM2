@@ -1,7 +1,9 @@
 # BLOOM chatbot for VIP 701 
 
 Environment:
+
 Ubuntu 22.04.2
+
 Pytorch 1.13.1
 
 In "interact.py", change the following directory to choose where you want to save the model/weights:
