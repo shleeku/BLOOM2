@@ -6,6 +6,9 @@ Ubuntu 22.04.2
 
 Pytorch 1.13.1
 
+Trannsformers 4.26.0
+
+
 In "interact.py", change the following directory to choose where you want to save the model/weights:
 
 data_dir="/mldata2/cache/transformers/bloom/"
