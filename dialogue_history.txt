@@ -1,0 +1,5 @@
+<s> hey how's it going? </s>
+<s> great thanks for asking! </s>
+<s> what are you up to? </s>
+<s> not much </s>
+<s> that's good to hear </s>
