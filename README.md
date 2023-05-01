@@ -9,7 +9,7 @@ and change this to specify which model/size you want to use:
 checkpoint = "bigscience/bloom-7b1"
 
 
-(Ignore this)
+(Ignore the following)
 
 ssh-keygen -t rsa -b 4096 -C "email@example.com"
 cat ~/.ssh/id_ed25519.pub
