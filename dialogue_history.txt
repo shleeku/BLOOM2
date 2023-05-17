@@ -3,3 +3,15 @@
 <s> what are you up to? </s>
 <s> not much </s>
 <s> that's good to hear </s>
+<s> hi </s>
+<s> how is your job ? </s>
+<s> i'm a student </s>
+<s> great </s>
+<s> what's up? </s>
+<s> i have no problem. </s>
+<s> hey how old are you? </s>
+<s> i was 18 when i was born. </s>
+<s> what do you do in your spare time? </s>
+<s> i play video games.</s>
+<s> do you play any sports? </s>
+<s> yes,i do.I like to skateboard </s>
