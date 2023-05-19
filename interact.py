@@ -51,38 +51,56 @@ def main():
         cont = "<s> " + cont + " </s>\n"
 
         if "brad" in cont.lower() and friend != "Brad":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Brad"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "elise" in cont.lower() and friend != "Elise":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Elise"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "jenny" in cont.lower() and friend != "Jenny":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Jenny"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "jimmy" in cont.lower() and friend != "Jimmy":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Jimmy"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "john" in cont.lower() and friend != "John":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "John"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "laura" in cont.lower() and friend != "Laura":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Laura"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "lizzy" in cont.lower() and friend != "Lizzy":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Lizzy"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "skye" in cont.lower() and friend != "Skye":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Skye"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
         if "tyler" in cont.lower() and friend != "Tyler":
+            with open("dialogue_history.txt", "w") as f:
+                f.write(''.join(dialogue_init))
             friend = "Tyler"
             print("{}:".format(friend), "Hey it's {}!".format(friend))
             continue
