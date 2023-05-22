@@ -30,7 +30,7 @@ def main():
     # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir)
     # tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir=data_dir)
 
-    with open('context.txt') as f:
+    with open('context_init.txt') as f:
         context_init = f.readlines()
 
     dialogue_init = []
@@ -42,70 +42,33 @@ def main():
     with open("dialogue_history.txt", "w") as f:
         f.write(''.join(dialogue_init))
 
-    friend = "AI chatbot"
+    friend = "AI"
 
     flag = True
     while flag:
 
+        breakout = False
         cont = input("Input: ")
-        cont = "<s> " + cont + " </s>\n"
+        cont = "<s> User: " + cont + " </s>\n"
 
-        if "brad" in cont.lower() and friend != "Brad":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Brad"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "elise" in cont.lower() and friend != "Elise":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Elise"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "jenny" in cont.lower() and friend != "Jenny":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Jenny"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "jimmy" in cont.lower() and friend != "Jimmy":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Jimmy"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "john" in cont.lower() and friend != "John":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "John"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "laura" in cont.lower() and friend != "Laura":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Laura"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "lizzy" in cont.lower() and friend != "Lizzy":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Lizzy"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "skye" in cont.lower() and friend != "Skye":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Skye"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
-            continue
-        if "tyler" in cont.lower() and friend != "Tyler":
-            with open("dialogue_history.txt", "w") as f:
-                f.write(''.join(dialogue_init))
-            friend = "Tyler"
-            print("{}:".format(friend), "Hey it's {}!".format(friend))
+        names = ["Brad", "Elise", "Jenny", "Jimmy", "John", "Laura", "Lizzy", "Skye", "Tyler"]
+        for n in names:
+            if n.lower() in cont.lower() and friend != n:
+                breakout = True
+                friend = n
+                with open('context_{}.txt'.format(friend.lower())) as f:
+                    context_init = f.readlines()
+                dialogue_init = []
+                for i in context_init:
+                    if "<s>" in i[:3]:
+                        dialogue_init.append(i)
+                with open("dialogue_history.txt", "w") as f:
+                    f.write(''.join(dialogue_init))
+                print("{}:".format(friend), "Hey it's {}!".format(friend))
+        if breakout == True:
             continue
 
-        if friend == "AI chatbot":
+        if friend == "AI":
             context_file = "context_init.txt"
         else:
             context_file = "context_{}.txt".format(friend.lower())
@@ -174,7 +137,7 @@ def main():
                                                   max_length=result_length,
                                                   do_sample=True,
                                                   top_k=50,
-                                                  top_p=0.9,
+                                                  top_p=0.8,
                                                   # max_time=6.0
                                                   )[0])
 
@@ -187,7 +150,7 @@ def main():
                 output_text = output_list[-1]
             if output_list[-1][-4:] == "</s>":
                 output_text = output_text[:-4]
-            print("{}:".format(friend), output_text)
+            print(output_text)
 
 if __name__ == "__main__":
     main()
