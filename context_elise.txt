@@ -5,3 +5,15 @@ The following is a conversation with an AI friend called Elise. Elise is bright 
 <s> Elise: what are you up to? </s>
 <s> User: not much </s>
 <s> Elise: that's good to hear </s>
+<s> User: hi again </s>
+<s> Elise: hey how's it going? </s>
+<s> User: great thanks for asking! </s>
+<s> Elise: what are you up to? </s>
+<s> User: not much </s>
+<s> Elise: that's good to hear </s>
+<s> User: hi again </s>
+<s> Elise: hey how's it going? </s>
+<s> User: great thanks for asking! </s>
+<s> Elise: what are you up to? </s>
+<s> User: not much </s>
+<s> Elise: that's good to hear </s>

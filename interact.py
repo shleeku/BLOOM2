@@ -18,10 +18,14 @@ def main():
     logger.info("Initializing model")
     torch.cuda.empty_cache()
 
-    ### BLOOM ###
+    # device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+    device = torch.device("cuda:0")
+
+    ### BLOOM ### 560m 1b1 1b7 3b 7b1
     data_dir="/mldata2/cache/transformers/bloom/"
-    checkpoint = "bigscience/bloom-7b1"
-    model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir)
+    # checkpoint = "bigscience/bloom-7b1"
+    checkpoint = "bigscience/bloom-3b"
+    model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
     tokenizer = BloomTokenizerFast.from_pretrained(checkpoint, cache_dir=data_dir)
 
     # ### VICUNA ###
@@ -109,7 +113,7 @@ def main():
             # print("\n" + 100 * '-')
             # print("Output:[Greedy]\n" + 100 * '-')
             # Greedy
-            # output = tokenizer.decode(model.generate(inputs["input_ids"],
+            # output = tokenizer.decode(model.generate(input_combined.to(device),
             #                                       max_length=result_length,
             #                                       # max_time=4.0
             #                                       )[0])
@@ -117,14 +121,14 @@ def main():
 
         #     print("\n" + 100 * '-')
         #     print("Output:[Beam Search]\n" + 100 * '-')
-        #     # # Beam Search
-        #     output = tokenizer.decode(model.generate(inputs["input_ids"],
-        #                                           max_length=result_length,
-        #                                           num_beams=2,
-        #                                           # no_repeat_ngram_size=2,
-        #                                           # early_stopping=True,
-        #                                           # max_time=6.0
-        #                                           )[0])
+            # # Beam Search
+            # output = tokenizer.decode(model.generate(input_combined.to(device),
+            #                                       max_length=result_length,
+            #                                       num_beams=2,
+            #                                       # no_repeat_ngram_size=2,
+            #                                       # early_stopping=True,
+            #                                       # max_time=6.0
+            #                                       )[0])
         #     # print("\n" + 100 * '-')
         #     # print("Output:[Sampling]\n" + 100 * '-')
         #     # # Sampling Top-k + Top-p
@@ -133,14 +137,17 @@ def main():
             # dialogue_text = tokenizer.decode(input_combined[0])
             # print(tokenizer.decode(input_combined[0]))
             # print(input_combined)
-            output = tokenizer.decode(model.generate(input_combined,
+    # --------------SAMPLING------------------------------------------------------------------------------
+            output = tokenizer.decode(model.generate(input_combined.to(device),
                                                   max_length=result_length,
                                                   do_sample=True,
-                                                  top_k=50,
-                                                  top_p=0.8,
+                                                  # top_k=50,
+                                                  # top_p=0.8,
+                                                     top_k=50,
+                                                     top_p=0.8,
                                                   # max_time=6.0
                                                   )[0])
-
+    # --------------SAMPLING------------------------------------------------------------------------------
             output_list = list(output.split("\n"))
             with open("dialogue_history.txt", "a") as f:
                 f.write(cont + output_list[-1] + "\n")

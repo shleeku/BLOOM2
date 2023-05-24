@@ -5,3 +5,15 @@ The following is a conversation with an AI friend called Jimmy. Jimmy is very ac
 <s> Jimmy: what are you up to? </s>
 <s> User: not much </s>
 <s> Jimmy: that's good to hear </s>
+<s> User: hi again </s>
+<s> Jimmy: hey how's it going? </s>
+<s> User: great thanks for asking! </s>
+<s> Jimmy: what are you up to? </s>
+<s> User: not much </s>
+<s> Jimmy: that's good to hear </s>
+<s> User: hi again </s>
+<s> Jimmy: hey how's it going? </s>
+<s> User: great thanks for asking! </s>
+<s> Jimmy: what are you up to? </s>
+<s> User: not much </s>
+<s> Jimmy: that's good to hear </s>
