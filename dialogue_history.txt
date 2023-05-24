@@ -1,27 +1,27 @@
-<s> Elise: hey how's it going? </s>
+<s> Skye: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Elise: what are you up to? </s>
+<s> Skye: what are you up to? </s>
 <s> User: not much </s>
-<s> Elise: that's good to hear </s>
+<s> Skye: that's good to hear </s>
 <s> User: hi again </s>
-<s> Elise: hey how's it going? </s>
+<s> Skye: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Elise: what are you up to? </s>
+<s> Skye: what are you up to? </s>
 <s> User: not much </s>
-<s> Elise: that's good to hear </s>
+<s> Skye: that's good to hear </s>
 <s> User: hi again </s>
-<s> Elise: hey how's it going? </s>
+<s> Skye: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Elise: what are you up to? </s>
+<s> Skye: what are you up to? </s>
 <s> User: not much </s>
-<s> Elise: that's good to hear </s>
-<s> User: hey Elise </s>
- Elise: good morning 
-<s> User: how are you? </s>
- Elise: good morning 
+<s> Skye: that's good to hear </s>
+<s> User: hey SKye </s>
+ Skye: I'm just wondering if you know of a place where I can watch some games on a computer.
+<s> User: ok </s>
+ Skye: if I can do that I will be happy.
+<s> User: great </s>
+ Skye: ok thanks 
 <s> User: how old are you? </s>
- Elise: well I am a 50 year old woman from Canada 
-<s> User: do you have any hobbies? </s>
- Elise: yes I do 
-<s> User: what are they? </s>
- Elise: I love to dance, I like to play the piano, I like to play the guitar, and I like to sing.
+ Skye: I'm 17 and I'm a freshman at USC
+<s> User: cool </s>
+ Skye: I have no interest in the computer game industry, but I am interested in other things such as cars, cars and skateboarding.

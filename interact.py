@@ -147,7 +147,7 @@ def main():
                                                                do_sample=True,
                                                                # top_k=50,
                                                                # top_p=0.8,
-                                                               top_k=200,
+                                                               top_k=100,
                                                                top_p=0.70,
                                                                # max_time=6.0,
                                                                num_return_sequences=1
