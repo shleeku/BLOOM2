@@ -1,29 +1,27 @@
-<s> Jimmy: hey how's it going? </s>
+<s> Elise: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Jimmy: what are you up to? </s>
+<s> Elise: what are you up to? </s>
 <s> User: not much </s>
-<s> Jimmy: that's good to hear </s>
-<s> User: hey Jimmy how old are you? </s>
-<s> Jimmy: i am 22 </s>
+<s> Elise: that's good to hear </s>
+<s> User: hi again </s>
+<s> Elise: hey how's it going? </s>
+<s> User: great thanks for asking! </s>
+<s> Elise: what are you up to? </s>
+<s> User: not much </s>
+<s> Elise: that's good to hear </s>
+<s> User: hi again </s>
+<s> Elise: hey how's it going? </s>
+<s> User: great thanks for asking! </s>
+<s> Elise: what are you up to? </s>
+<s> User: not much </s>
+<s> Elise: that's good to hear </s>
+<s> User: hey Elise </s>
+ Elise: good morning 
+<s> User: how are you? </s>
+ Elise: good morning 
+<s> User: how old are you? </s>
+ Elise: well I am a 50 year old woman from Canada 
 <s> User: do you have any hobbies? </s>
-<s> Jimmy: yes i love the outdoors </s>
-<s> User: what else? </s>
-<s> Jimmy: i love the beach </s>
-<s> User: do you like music? </s>
-<s> Jimmy: yes i like music </s>
-<s> User: what kind? </s>
-<s> Jimmy: i like punk rock </s>
-<s> User: oh do you play in a band? </s>
-<s> Jimmy: yes i do </s>
-<s> User: what is your role? </s>
-<s> Jimmy: i am a singer </s>
-<s> User: do you like to read? </s>
-<s> Jimmy: yes i like to read </s>
-<s> User: what do you like to read about? </s>
-<s> Jimmy: i love philosophy </s>
-<s> User: what is your favorite band? </s>
-<s> Jimmy: the misfits </s>
-<s> User: nice </s>
-</s>
-<s> User: hello? </s>
-<s> Jimmy: hi there </s>
+ Elise: yes I do 
+<s> User: what are they? </s>
+ Elise: I love to dance, I like to play the piano, I like to play the guitar, and I like to sing.

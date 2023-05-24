@@ -137,17 +137,46 @@ def main():
             # dialogue_text = tokenizer.decode(input_combined[0])
             # print(tokenizer.decode(input_combined[0]))
             # print(input_combined)
-    # --------------SAMPLING------------------------------------------------------------------------------
-            output = tokenizer.decode(model.generate(input_combined.to(device),
-                                                  max_length=result_length,
-                                                  do_sample=True,
-                                                  # top_k=50,
-                                                  # top_p=0.8,
-                                                     top_k=50,
-                                                     top_p=0.8,
-                                                  # max_time=6.0
-                                                  )[0])
-    # --------------SAMPLING------------------------------------------------------------------------------
+            # --------------SAMPLING------------------------------------------------------------------------------
+            found = False
+            counter = 0
+            while found == False or counter==30:
+                counter += 1
+                total_output = model.generate(input_combined.to(device),
+                                                               max_length=result_length,
+                                                               do_sample=True,
+                                                               # top_k=50,
+                                                               # top_p=0.8,
+                                                               top_k=200,
+                                                               top_p=0.70,
+                                                               # max_time=6.0,
+                                                               num_return_sequences=1
+                                                               )
+
+                output_sequences = []
+                for sequence in total_output:
+                    output_sequences.append(tokenizer.decode(sequence, skip_special_tokens=True))
+
+                generations = []
+                for i in output_sequences:
+                    generations.append(list(i.split("\n"))[-1])
+                #     print("LEN of sequence:", len(i))
+                #     print("output:", i[:-1])
+                # print("LEN of total_output:", len(total_output))
+                # for i in generations:
+                    # print("generation:", i)
+                found = False
+                for i in output_sequences:
+                    sequence_list = list(i.split("\n"))
+                    if sequence_list[-1] != "" and not "user:" in sequence_list[-1].lower() and not sequence_list[-1].strip()=="AI:":
+                        output = i
+                        found = True
+                        break
+            if found == False:
+                output = "I don't know what to say."
+
+
+            # --------------SAMPLING------------------------------------------------------------------------------
             output_list = list(output.split("\n"))
             with open("dialogue_history.txt", "a") as f:
                 f.write(cont + output_list[-1] + "\n")
