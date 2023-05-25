@@ -21,6 +21,10 @@ checkpoint = "bigscience/bloom-7b1"
 
 checkpoint = "bigscience/bloom-560m"
 
+If the GPU is not working try:
+
+model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto")
+
 
 (Ignore the following)
 

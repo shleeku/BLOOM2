@@ -140,7 +140,7 @@ def main():
             # --------------SAMPLING------------------------------------------------------------------------------
             found = False
             counter = 0
-            while found == False or counter==30:
+            while found == False and counter<100:
                 counter += 1
                 total_output = model.generate(input_combined.to(device),
                                                                max_length=result_length,
@@ -168,7 +168,7 @@ def main():
                 found = False
                 for i in output_sequences:
                     sequence_list = list(i.split("\n"))
-                    if sequence_list[-1] != "" and not "user:" in sequence_list[-1].lower() and not sequence_list[-1].strip()=="AI:":
+                    if sequence_list[-1].strip() != "" and not "user:" in sequence_list[-1].lower() and not sequence_list[-1].strip()=="AI:":
                         output = i
                         found = True
                         break
