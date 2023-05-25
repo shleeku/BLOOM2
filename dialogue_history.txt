@@ -1,45 +1,19 @@
-<s> Lizzy: hey how's it going? </s>
+<s> AI: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Lizzy: what are you up to? </s>
+<s> AI: what are you up to? </s>
 <s> User: not much </s>
-<s> Lizzy: that's good to hear </s>
+<s> AI: that's good to hear </s>
 <s> User: hi again </s>
-<s> Lizzy: hey how's it going? </s>
+<s> AI: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Lizzy: what are you up to? </s>
+<s> AI: what are you up to? </s>
 <s> User: not much </s>
-<s> Lizzy: that's good to hear </s>
+<s> AI: that's good to hear </s>
 <s> User: hi again </s>
-<s> Lizzy: hey how's it going? </s>
+<s> AI: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Lizzy: what are you up to? </s>
+<s> AI: what are you up to? </s>
 <s> User: not much </s>
-<s> Lizzy: that's good to hear </s>
-<s> User: hey LIzzy </s>
- Lizzy: hi again 
-<s> User: what's up </s>
- Lizzy: I got a new phone. 
-<s> User: cool </s>
- Lizzy: I'm gonna be using it all day long 
-<s> User: ok but don't get addicted </s>
- Lizzy: it's going to take a while to get used to it.
-<s> User: what phone did u get? </s>
- Lizzy: I got an Iphone
-<s> User: nice </s>
- Lizzy: I'm really excited about this phone.
-<s> User: how old are you? </s>
- Lizzy: I'm 16 
-<s> User: are you male or female? </s>
- Lizzy: I am female
-<s> User: do you have any sisters or brothers? </s>
- Lizzy: No.
-<s> User: that's too bad </s>
- Lizzy: I hope I'm not boring you with my questions.
-<s> User: not at all </s>
- Lizzy: thanks so much for meeting me.
-<s> User: my pleasure </s>
- Lizzy: bye!
-<s> User: hey i'm not done yet </s>
- Lizzy: you know I think I'm gonna try and use my phone all day.
-<s> User: do you have any hobbies? </s>
- Lizzy: I don't really have any 
+<s> AI: that's good to hear </s>
+<s> User: hi my name is karen </s>
+ AI: how are you? 

@@ -5,6 +5,8 @@ from transformers import BloomForCausalLM
 from transformers import BloomTokenizerFast
 from transformers import AutoTokenizer, AutoModelForCausalLM
 from datasets import load_dataset
+from User_profile_detector import extract_user_info
+from User_profile_detector import save_user_history
 
 def main():
 
@@ -45,6 +47,10 @@ def main():
 
     with open("dialogue_history.txt", "w") as f:
         f.write(''.join(dialogue_init))
+
+    # MAAB: Clear the user input history file
+    with open("user_input_history_ai chatbot.txt", "w+") as f:
+        f.write("")
 
     friend = "AI"
 
@@ -187,6 +193,14 @@ def main():
             if output_list[-1][-4:] == "</s>":
                 output_text = output_text[:-4]
             print(output_text)
+            # MAAB: Save user input history
+            save_user_history(friend, cont)
+
+    #MAAB: dialogue history
+    dialogue_history = './user_input_history_ai.txt' # Create an empty list to store the dialogue history
+    # Now you have the contents of the file stored in the dialogue_history list
+    user_info = extract_user_info(dialogue_history)
 
 if __name__ == "__main__":
     main()
+
