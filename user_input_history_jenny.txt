@@ -1,0 +1,38 @@
+<s> User: hey jenny whats up dude </s>
+
+<s> User: haha u are so cool </s>
+
+<s> User: good </s>
+
+<s> User: i'm good </s>
+
+<s> User: stop repeating yourself </s>
+
+<s> User: ok so whatcha been up to? </s>
+
+<s> User: that sounds boring </s>
+
+<s> User: oh what about? </s>
+
+<s> User: wow that's so cool </s>
+
+<s> User: i'm good </s>
+
+<s> User: why do you keep repeating yourself? </s>
+
+<s> User: how old are you again? </s>
+
+<s> User: and how old am I/ </s>
+
+<s> User: no i'm not </s>
+
+<s> User: ok but how old am I? </s>
+
+<s> User: dude you are so dumb </s>
+
+<s> User: i'm 13 </s>
+
+<s> User: ok who is the president of france? </s>
+
+<s> User: who is the prime minister of the uk? </s>
+

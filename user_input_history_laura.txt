@@ -1,0 +1,12 @@
+<s> User: laura whats up </s>
+
+<s> User: yes </s>
+
+<s> User: i had a great day </s>
+
+<s> User: i was just studying </s>
+
+<s> User: cool </s>
+
+<s> User: so what </s>
+

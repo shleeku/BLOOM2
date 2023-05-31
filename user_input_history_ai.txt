@@ -38,3 +38,25 @@
 
 <s> User: hi my name is karen </s>
 
+<s> User: hi </s>
+
+<s> User: good how are you </s>
+
+<s> User: i'm fine </s>
+
+<s> User: so what are you up to? </s>
+
+<s> User: hi </s>
+
+<s> User: good how are u? </s>
+
+<s> User: wow thanks </s>
+
+<s> User: i'm fine </s>
+
+<s> User: so what have u been up to? </s>
+
+<s> User: hi </s>
+
+<s> User: great </s>
+

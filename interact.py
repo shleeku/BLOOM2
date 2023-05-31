@@ -27,7 +27,7 @@ def main():
     data_dir="/mldata2/cache/transformers/bloom/"
     # checkpoint = "bigscience/bloom-7b1"
     checkpoint = "bigscience/bloom-3b"
-    model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
+    model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto").to(device)
     tokenizer = BloomTokenizerFast.from_pretrained(checkpoint, cache_dir=data_dir)
 
     # ### VICUNA ###
@@ -156,7 +156,8 @@ def main():
                                                                top_k=100,
                                                                top_p=0.70,
                                                                # max_time=6.0,
-                                                               num_return_sequences=1
+                                                               num_return_sequences=1,
+                                                                temperature=0.7
                                                                )
 
                 output_sequences = []

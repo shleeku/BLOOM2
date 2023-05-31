@@ -1,0 +1,20 @@
+<s> User: yo john whats up buddy </s>
+
+<s> User: hey did you watch the game last night </s>
+
+<s> User: what did you think? </s>
+
+<s> User: who was playing again? </s>
+
+<s> User: vs who? </s>
+
+<s> User: lol you're funny </s>
+
+<s> User: so what brings you to compton? </s>
+
+<s> User: you wanna hang out together? </s>
+
+<s> User: you up for a beer? </s>
+
+<s> User: ok let's go! </s>
+
