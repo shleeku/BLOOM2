@@ -1,29 +1,31 @@
-<s> Laura: hey how's it going? </s>
+<s> Brad: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Laura: what are you up to? </s>
+<s> Brad: what are you up to? </s>
 <s> User: not much </s>
-<s> Laura: that's good to hear </s>
+<s> Brad: that's good to hear </s>
 <s> User: hi again </s>
-<s> Laura: hey how's it going? </s>
+<s> Brad: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Laura: what are you up to? </s>
+<s> Brad: what are you up to? </s>
 <s> User: not much </s>
-<s> Laura: that's good to hear </s>
+<s> Brad: that's good to hear </s>
 <s> User: hi again </s>
-<s> Laura: hey how's it going? </s>
+<s> Brad: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Laura: what are you up to? </s>
+<s> Brad: what are you up to? </s>
 <s> User: not much </s>
-<s> Laura: that's good to hear </s>
-<s> User: laura whats up </s>
- Laura: i have a question 
-<s> User: yes </s>
- Laura: can you tell me about your day?
-<s> User: i had a great day </s>
- Laura: what did you do?
-<s> User: i was just studying </s>
- Laura: i went to the gym 
-<s> User: cool </s>
- Laura: i went to the gym 
-<s> User: so what </s>
- Laura: i had a great day 
+<s> Brad: that's good to hear </s>
+<s> User: hey brad whats up dude </s>
+ Brad: I'm going to try to lose some weight 
+<s> User: again? </s>
+ Brad: I don't know if I can 
+<s> User: you can do it man don't worry </s>
+ Brad: I know I can lose weight 
+<s> User: yea that's the spirit </s>
+ Brad: but I don't know if I can keep it 
+<s> User: keep what? </s>
+I don't know what to say.
+<s> User: so what did you do over the weekend? </s>
+ Brad: I went to the gym 
+<s> User: wow so boring </s>
+I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to

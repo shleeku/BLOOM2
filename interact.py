@@ -61,7 +61,7 @@ def main():
         cont = input("Input: ")
         cont = "<s> User: " + cont + " </s>\n"
 
-        names = ["Brad", "Elise", "Jenny", "Jimmy", "John", "Laura", "Lizzy", "Skye", "Tyler"]
+        names = ["Brad", "Jenny", "Jimmy", "John", "Laura", "Tyler", "Sky",  "Lizzie", "Alice"]
         for n in names:
             if n.lower() in cont.lower() and friend != n:
                 breakout = True
@@ -201,6 +201,7 @@ def main():
     dialogue_history = './user_input_history_ai.txt' # Create an empty list to store the dialogue history
     # Now you have the contents of the file stored in the dialogue_history list
     user_info = extract_user_info(dialogue_history)
+
 
 if __name__ == "__main__":
     main()

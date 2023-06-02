@@ -60,3 +60,13 @@
 
 <s> User: great </s>
 
+<s> User: hi </s>
+
+<s> User: good </s>
+
+<s> User: nothing just studying </s>
+
+<s> User: what about you? </s>
+
+<s> User: you have any friends i can talk to? </s>
+
