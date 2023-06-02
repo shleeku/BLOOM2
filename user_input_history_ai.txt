@@ -70,3 +70,5 @@
 
 <s> User: you have any friends i can talk to? </s>
 
+<s> User: hi </s>
+

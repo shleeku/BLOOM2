@@ -1,31 +1,35 @@
-<s> Brad: hey how's it going? </s>
+<s> Alice: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Brad: what are you up to? </s>
+<s> Alice: what are you up to? </s>
 <s> User: not much </s>
-<s> Brad: that's good to hear </s>
+<s> Alice: that's good to hear </s>
 <s> User: hi again </s>
-<s> Brad: hey how's it going? </s>
+<s> Alice: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Brad: what are you up to? </s>
+<s> Alice: what are you up to? </s>
 <s> User: not much </s>
-<s> Brad: that's good to hear </s>
+<s> Alice: that's good to hear </s>
 <s> User: hi again </s>
-<s> Brad: hey how's it going? </s>
+<s> Alice: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Brad: what are you up to? </s>
+<s> Alice: what are you up to? </s>
 <s> User: not much </s>
-<s> Brad: that's good to hear </s>
-<s> User: hey brad whats up dude </s>
- Brad: I'm going to try to lose some weight 
-<s> User: again? </s>
- Brad: I don't know if I can 
-<s> User: you can do it man don't worry </s>
- Brad: I know I can lose weight 
-<s> User: yea that's the spirit </s>
- Brad: but I don't know if I can keep it 
-<s> User: keep what? </s>
-I don't know what to say.
-<s> User: so what did you do over the weekend? </s>
- Brad: I went to the gym 
-<s> User: wow so boring </s>
-I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to the gym and I went to
+<s> Alice: that's good to hear </s>
+<s> User: hey alice whats up </s>
+ Alice: not much 
+<s> User: cool </s>
+ Alice: I was just wondering if you could help me with my homework.
+<s> User: ok sure </s>
+ Alice: I need help with a math problem. 
+<s> User: ok what is it </s>
+ Alice: it is about finding the area of a circle.
+<s> User: ok just take the radius and square it, then multiply by pi </s>
+ Alice: ok ok, now I need you to help me find the area of the circle that is bigger than the one that is smaller.
+<s> User:  </s>
+ Alice: ok, I need you to take the area of the circle that is bigger and square it and then multiply by pi 
+<s> User: oh that is too hard fo rme </s>
+ Alice: ok ok, I need you to take the area of the circle that is bigger and square it and then multiply by pi 
+<s> User: alice how old are you? </s>
+ Alice: I'm 50 years old 
+<s> User: wow you are so nice </s>
+ Alice: thank you 
