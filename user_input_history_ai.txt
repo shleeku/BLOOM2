@@ -72,3 +72,143 @@
 
 <s> User: hi </s>
 
+<s> User: hi </s>
+
+<s> User: what?? </s>
+
+<s> User: hi </s>
+
+<s> User: what?? </s>
+
+<s> User: hi </s>
+
+<s> User: how are you? </s>
+
+<s> User: i'm a human </s>
+
+<s> User: hi </s>
+
+<s> User: good good </s>
+
+<s> User: just studying </s>
+
+<s> User: what about you? </s>
+
+<s> User: really? what kind of work? </s>
+
+<s> User: what is the project about? </s>
+
+<s> User: go on </s>
+
+<s> User: hi </s>
+
+<s> User: good how are you? </s>
+
+<s> User: hi </s>
+
+<s> User: hi </s>
+
+<s> User: good how are you? </s>
+
+<s> User: what are you up to? </s>
+
+<s> User: oh i see </s>
+
+<s> User: hi </s>
+
+<s> User: hi </s>
+
+<s> User: good how are you? </s>
+
+<s> User: my dog just died </s>
+
+<s> User: I am so sad </s>
+
+<s> User: I am sad because my dog died </s>
+
+<s> User: hi </s>
+
+<s> User: terrible, my dog just died </s>
+
+<s> User: i am so sad </s>
+
+<s> User: hi </s>
+
+<s> User: hi </s>
+
+<s> User: terrible </s>
+
+<s> User: my dog just died </s>
+
+<s> User: hi </s>
+
+<s> User: i am so sad </s>
+
+<s> User: i am crying </s>
+
+<s> User: my dog just died </s>
+
+<s> User: yes my dog is very sick </s>
+
+<s> User: i am feeling so sad and depressed </s>
+
+<s> User: i feel terrible </s>
+
+<s> User: hi </s>
+
+<s> User: terrible </s>
+
+<s> User: my dog just died </s>
+
+<s> User: i am so sad </s>
+
+<s> User: can you help me? </s>
+
+<s> User: i am so depressed </s>
+
+<s> User: my dog is dying </s>
+
+<s> User: i am so sad </s>
+
+<s> User: i am depressed </s>
+
+<s> User: yea my dog just died </s>
+
+<s> User: my dog is dead </s>
+
+<s> User: terrible </s>
+
+<s> User: my dog </s>
+
+<s> User: hi </s>
+
+<s> User: terrible </s>
+
+<s> User: i'm so sad </s>
+
+<s> User: i'm so sad </s>
+
+<s> User: so depressed </s>
+
+<s> User: i'm so sad </s>
+
+<s> User: my dog just died </s>
+
+<s> User: terrible </s>
+
+<s> User: what should I do? </s>
+
+<s> User: no dog can replace him </s>
+
+<s> User: i am so sad </s>
+
+<s> User: i'm soo sad </s>
+
+<s> User: my dog is sick </s>
+
+<s> User: i am so depressed </s>
+
+<s> User: my dog is dying </s>
+
+<s> User: my dog is sick </s>
+

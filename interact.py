@@ -8,6 +8,10 @@ from datasets import load_dataset
 from User_profile_detector import extract_user_info
 from User_profile_detector import save_user_history
 
+from transformers import pipeline
+from matplotlib import pyplot as plt
+import pandas as pd
+
 def main():
 
     logging.basicConfig(
@@ -29,6 +33,14 @@ def main():
     checkpoint = "bigscience/bloom-3b"
     model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto").to(device)
     tokenizer = BloomTokenizerFast.from_pretrained(checkpoint, cache_dir=data_dir)
+
+
+    # ### DOLLY ###
+    # data_dir="/mldata2/cache/transformers/dolly/"
+    # checkpoint = "databricks/dolly-v2-3b"
+    # tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir=data_dir)
+    # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto").to(device)
+    # # model.config.pad_token_id = tokenizer.eos_token_id
 
     # ### VICUNA ###
     # data_dir="/mldata2/cache/transformers/vicuna/"
@@ -157,7 +169,8 @@ def main():
                                                                top_p=0.70,
                                                                # max_time=6.0,
                                                                num_return_sequences=1,
-                                                                temperature=0.7
+                                                                temperature=0.8,
+                                              # attention_mask=torch.tensor([1]*len(input_combined[0])).unsqueeze(0).to(device),
                                                                )
 
                 output_sequences = []
@@ -181,9 +194,8 @@ def main():
                         break
             if found == False:
                 output = "I don't know what to say."
-
-
             # --------------SAMPLING------------------------------------------------------------------------------
+
             output_list = list(output.split("\n"))
             with open("dialogue_history.txt", "a") as f:
                 f.write(cont + output_list[-1] + "\n")
@@ -194,6 +206,31 @@ def main():
             if output_list[-1][-4:] == "</s>":
                 output_text = output_text[:-4]
             print(output_text)
+
+            # --------------EMOTION------------------------------------------------------------------------------
+            if ":" in output_text:
+                chatbot_text = output_text.split(":")[1].strip()
+            else:
+                chatbot_text = output_text
+            # labels = ['joy', 'anger', 'fear', 'sadness', 'love', 'surprise']
+            # labels = ['sadness', 'joy', 'love', 'anger', 'fear', 'surprise']
+            model_id = "transformersbook/distilbert-base-uncased-finetuned-emotion"
+            classifier = pipeline("text-classification", model=model_id)
+
+            preds = classifier(chatbot_text, top_k=None)
+            # preds = classifier(chatbot_text, return_all_scores=True)
+            top_pred = classifier(chatbot_text, top_k=1)
+            print("chatbot emotion:", top_pred[0]["label"])
+
+            preds_df = pd.DataFrame(preds)
+            # preds_df = pd.DataFrame(preds[0])
+            # plt.bar(labels, 100 * preds_df["score"], color='C0')
+            plt.bar(preds_df["label"], 100 * preds_df["score"], color='C0')
+            plt.title(f'"{chatbot_text}"')
+            plt.ylabel("Class probability (%)")
+            plt.show()
+            # --------------EMOTION------------------------------------------------------------------------------
+
             # MAAB: Save user input history
             save_user_history(friend, cont)
 

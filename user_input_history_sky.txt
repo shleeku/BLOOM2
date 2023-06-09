@@ -1,0 +1,48 @@
+<s> User: skye how are you? </s>
+
+<s> User: i am so sad </s>
+
+<s> User: my dog just died </s>
+
+<s> User: hi skye </s>
+
+<s> User: terrible my dog just died </s>
+
+<s> User: i'm so sad my dog is sick </s>
+
+<s> User: what should i do? </s>
+
+<s> User: skye my dog is dying! </s>
+
+<s> User: i'm so sad! </s>
+
+<s> User: i am so sad </s>
+
+<s> User: my dog is sick </s>
+
+<s> User: he is dying </s>
+
+<s> User: how? </s>
+
+<s> User: I'm too sad </s>
+
+<s> User: my name is jody </s>
+
+<s> User: my dog is sick what should i do? </s>
+
+<s> User: i am so sad </s>
+
+<s> User: my dog is sick </s>
+
+<s> User: what should i do? </s>
+
+<s> User: stop bothering me! </s>
+
+<s> User: i am so sad </s>
+
+<s> User: my dog is sick </s>
+
+<s> User: what should i do? </s>
+
+<s> User: thank you skye </s>
+
