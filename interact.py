@@ -11,6 +11,9 @@ from User_profile_detector import save_user_history
 from transformers import pipeline
 from matplotlib import pyplot as plt
 import pandas as pd
+from User_profile_detector import write_user_info
+from User_profile_detector import convert_user_info_to_sentences
+from User_profile_detector import write_sentence_to_file
 
 def main():
 
@@ -61,19 +64,31 @@ def main():
         f.write(''.join(dialogue_init))
 
     # MAAB: Clear the user input history file
-    with open("user_input_history_ai chatbot.txt", "w+") as f:
+    with open("user_input_history_ai.txt", "w+") as f:
         f.write("")
 
     friend = "AI"
+    user_id = int(input("User ID: "))
 
     flag = True
     while flag:
-
         breakout = False
         cont = input("Input: ")
         cont = "<s> User: " + cont + " </s>\n"
 
         names = ["Brad", "Jenny", "Jimmy", "John", "Laura", "Tyler", "Sky",  "Lizzie", "Alice"]
+        friend_list = {"Brad": ["weightlifting", "drinking", "partying"],
+        "Sky": ["volleyball", "skiing", "arts and crafts"],
+        "Lizzie": ["movies", "reading", "going to the beach"],
+        "Tyler": ["hanging out", "skateboarding", "surfing"],
+        "Jenny": ["writing", "politics", "environmental issues"],
+        "Jimmy": ["rock band", "singing", "philosophy"],
+        "Laura": ["knitting", "skydiving", "classical music"],
+        "Alice": ["ballet", "jazz music", "opera"],
+        "John": ["western movies", "broadway musicals", "history"]}
+        young_friends = ["Tyler", "Sky",  "Lizzie"]
+        middle_friends = ["Brad", "Jenny", "Jimmy"]
+        old_friends = ["Laura", "John", "Alice"]
         for n in names:
             if n.lower() in cont.lower() and friend != n:
                 breakout = True
@@ -127,6 +142,14 @@ def main():
             if len(ids_dialogue) > max_len_dialogue:
                 ids_dialogue = ids_dialogue[-max_len_dialogue:]
             ids_combined = ids_context + ids_dialogue
+            # input_combined = torch.tensor([ids_combined])
+            # MAAB: Add the new sentences to the context file
+            converted_sentence = []
+            if converted_sentence:
+                new_sentences = converted_sentence[-1]
+                new_ids = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(new_sentences))
+                ids_combined += new_ids
+
             input_combined = torch.tensor([ids_combined])
             # print("\n" + 100 * '-')
             # print("Output:[Greedy]\n" + 100 * '-')
@@ -158,7 +181,7 @@ def main():
             # --------------SAMPLING------------------------------------------------------------------------------
             found = False
             counter = 0
-            while found == False and counter<100:
+            while found == False and counter<50:
                 counter += 1
                 total_output = model.generate(input_combined.to(device),
                                                                max_length=result_length,
@@ -233,12 +256,54 @@ def main():
 
             # MAAB: Save user input history
             save_user_history(friend, cont)
+            dialogue_history = './user_input_history_ai.txt'  # Create an empty list to store the dialogue history
+            # Now you have the contents of the file stored in the dialogue_history list
+            user_info = extract_user_info(dialogue_history, user_id)  # Extract the user info from the dialogue history
+            write_user_info(user_info, "output.txt")  # Write the user info to a file
+            converted_sentence = convert_user_info_to_sentences(user_info)  # Convert the user info to a sentence
+            write_sentence_to_file(converted_sentence, "New_Prompt.txt")  # Write the sentence to a file
+            count=0
+            found = False
+            for key in user_info:
+                if key!= "age" and key!= "name" and key!= "user_id" and len(user_info[key])>0:
+                    count +=1
+            if count >=1 and user_info["age"] is not None:
+                user_interests = []
+                for key in user_info:
+                    if key!= "age" and key!= "name" and key!= "user_id" and len(user_info[key])>0:
+                        user_interests.extend(user_info[key])
+                        # print(user_interests)
+                if user_info["age"]<20:
+                    for i in user_interests:
+                        for new_friend in young_friends:
+                            if i.lower() in friend_list[new_friend]:
+                                friend = new_friend
+                                found = True
+                                break
+                elif user_info["age"]<40:
+                    for i in user_interests:
+                        for new_friend in middle_friends:
+                            if i.lower() in friend_list[new_friend]:
+                                friend = new_friend
+                                found = True
+                                break
+                else:
+                    for i in user_interests:
+                        for new_friend in old_friends:
+                            if i.lower() in friend_list[new_friend]:
+                                friend = new_friend
+                                found = True
+                                break
 
-    #MAAB: dialogue history
-    dialogue_history = './user_input_history_ai.txt' # Create an empty list to store the dialogue history
-    # Now you have the contents of the file stored in the dialogue_history list
-    user_info = extract_user_info(dialogue_history)
-
+                if found == True:
+                    with open('context_{}.txt'.format(friend.lower())) as f:
+                        context_init = f.readlines()
+                    dialogue_init = []
+                    for i in context_init:
+                        if "<s>" in i[:3]:
+                            dialogue_init.append(i)
+                    with open("dialogue_history.txt", "w") as f:
+                        f.write(''.join(dialogue_init))
 
 if __name__ == "__main__":
     main()

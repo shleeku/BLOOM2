@@ -1,25 +1,17 @@
-<s> Skye: hey how's it going? </s>
+<s> Laura: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Skye: what are you up to? </s>
+<s> Laura: what are you up to? </s>
 <s> User: not much </s>
-<s> Skye: that's good to hear </s>
+<s> Laura: that's good to hear </s>
 <s> User: hi again </s>
-<s> Skye: hey how's it going? </s>
+<s> Laura: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Skye: what are you up to? </s>
+<s> Laura: what are you up to? </s>
 <s> User: not much </s>
-<s> Skye: that's good to hear </s>
+<s> Laura: that's good to hear </s>
 <s> User: hi again </s>
-<s> Skye: hey how's it going? </s>
+<s> Laura: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Skye: what are you up to? </s>
+<s> Laura: what are you up to? </s>
 <s> User: not much </s>
-<s> Skye: that's good to hear </s>
-<s> User: i am so sad </s>
- Skye: i am sorry 
-<s> User: my dog is sick </s>
- Skye: it is very sad 
-<s> User: what should i do? </s>
- Skye: i will be here if you need me 
-<s> User: thank you skye </s>
- Skye: bye 
+<s> Laura: that's good to hear </s>

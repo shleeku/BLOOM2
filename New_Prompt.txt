@@ -1,0 +1,228 @@
+ David 
+ 
+  's age is 25.
+David 
+ 
+  's id is 1153.
+David 
+ 
+  's job is student, student.
+The user name is David 
+ 
+  .
+David 
+ 
+   is interested in ai.
+ David 
+ 
+  's age is 25.
+David 
+ 
+  's id is 1153.
+David 
+ 
+  's job is student, student.
+The user name is David 
+ 
+  .
+David 
+ 
+   is interested in ai.
+ David 
+ 
+  's age is 25.
+David 
+ 
+  's id is 1153.
+David 
+ 
+  's job is student, student, developer.
+The user name is David 
+ 
+  .
+David 
+ 
+   is interested in ai.
+ David 
+ 
+  's age is 25.
+David 
+ 
+  's id is 1153.
+David 
+ 
+  's job is student, student, developer.
+The user name is David 
+ 
+  .
+David 
+ 
+   is interested in ai.
+David 
+ 
+  's id is 1153.
+David 
+ 
+  's job is student, student, developer.
+The user name is David 
+ 
+  .
+ David 
+ 
+  's age is 40.
+David 
+ 
+   is interested in ai.
+David 
+ 
+  's id is 1154.
+The user name is David 
+ 
+  .
+ David 
+ 
+  's age is 40.
+David 
+ 
+   is interested in ai.
+David 
+ 
+  's job is student, student, developer.
+David 
+ 
+  's id is 1154.
+The user name is David 
+ 
+  .
+ David 
+ 
+  's age is 40.
+David 
+ 
+   is interested in ai.
+David 
+ 
+  's job is student, student, developer.
+David 
+ 
+  's id is 1154.
+The user name is David 
+ 
+  .
+ David 
+ 
+  's age is 40.
+David 
+ 
+   is interested in ai.
+David 
+ 
+  's job is student, student, developer.
+David 
+ 
+  's id is 1154.
+The user name is David 
+ 
+  .
+David 
+ 
+   is interested in ai.
+David 
+ 
+  's job is student, student, developer.
+ David 
+ 
+  's age is 20.
+The user name is Brian.
+Brian's id is 1154.
+ Brian's age is 60.
+Brian favorite sports are surfing.
+Brian's hobbies are surfing.
+Greg's id is 1155.
+The user name is Greg.
+None's id is 1155.
+ Greg's age is 14.
+ Greg's age is 16.
+Greg favorite sports are surfing.
+Greg's hobbies are surfing.
+None's id is 1157.
+ None's age is 22.
+The user name is Robert 
+ 
+.
+Robert 
+ 
+'s id is 1157.
+Robert 
+ 
+  's id is 1157.
+ Robert 
+ 
+  's age is 23.
+The user name is Robert 
+ 
+  .
+Robert 
+ 
+  's id is 1157.
+ Robert 
+ 
+  's age is 23.
+The user name is Robert 
+ 
+  .
+Robert 
+ 
+  's id is 1157.
+ Robert 
+ 
+  's age is 23.
+The user name is Robert 
+ 
+  .
+Robert 
+ 
+  's hobbies are writing.
+Robert 
+ 
+  's id is 1157.
+ Robert 
+ 
+  's age is 23.
+The user name is Robert 
+ 
+  .
+Robert 
+ 
+  's hobbies are writing.
+Robert 
+ 
+  's id is 1157.
+ Robert 
+ 
+  's age is 23.
+The user name is Robert 
+ 
+  .
+Robert 
+ 
+  's hobbies are writing.
+Robert 
+ 
+  's id is 1157.
+ Robert 
+ 
+  's age is 23.
+The user name is Robert 
+ 
+  .
+Robert 
+ 
+  's hobbies are writing.
+None's id is 1158.
+The user name is Evan.
+Evan's id is 1158.
+ Evan's age is 45.
+Evan's hobbies are ballet.
+Evan's hobbies are knitting.
+ Evan's age is 80.
