@@ -15,11 +15,11 @@
 <s> AI: what are you up to? </s>
 <s> User: not much </s>
 <s> AI: that's good to hear </s>
-<s> User: Hi </s>
- AI: how are you? 
-<s> User: I'm fine how are you? </s>
- AI: you look great 
-<s> User: thanks! </s>
- AI: how about you? 
-<s> User: you look amazing yourself </s>
- AI: good to hear 
+<s> User: hi </s>
+ AI: hey how's it going? 
+<s> User: good </s>
+ AI: what are you up to? 
+<s> User: nothing just studying </s>
+ AI: that's good to hear 
+<s> User: do you like pancakes? </s>
+ AI: yes 

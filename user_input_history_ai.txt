@@ -1,8 +1,8 @@
-<s> User: Hi </s>
+<s> User: hi </s>
 
-<s> User: I'm fine how are you? </s>
+<s> User: good </s>
 
-<s> User: thanks! </s>
+<s> User: nothing just studying </s>
 
-<s> User: you look amazing yourself </s>
+<s> User: do you like pancakes? </s>
 

@@ -14,8 +14,30 @@ import pandas as pd
 from User_profile_detector import write_user_info
 from User_profile_detector import convert_user_info_to_sentences
 from User_profile_detector import write_sentence_to_file
+from flask import Flask, request, jsonify
 
-def main():
+
+app = Flask(__name__)
+
+
+@app.route('/chat', methods=['POST'])
+def chat():
+    # get the message from the POST request body
+    data = request.get_json()
+    message = data.get('message')
+
+    logging.basicConfig(
+        format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
+        datefmt="%m/%d/%Y %H:%M:%S",
+        level=logging.INFO,
+    )
+    logger = logging.getLogger(__name__)
+
+    logger.info("Initializing model")
+    torch.cuda.empty_cache()
+
+# def main():
+
 
     logging.basicConfig(
         format="%(asctime)s - %(levelname)s - %(name)s - %(message)s",
@@ -240,7 +262,7 @@ def main():
 
             # --------------ACTION------------------------------------------------------------------------------
             action = ""
-            if "hi" in output_text.lower() or "hello" in output_text.lower() or "bye" in output_text.lower() or "hey" in output_text.lower():
+            if "hi" in output_text.lower() or "hello" in output_text.lower() or "bye" in output_text.lower():
                 action = "handwave"
             elif "yes" in output_text.lower() or "correct" in output_text.lower():
                 action = "nod"
@@ -326,6 +348,12 @@ def main():
                             dialogue_init.append(i)
                     with open("dialogue_history.txt", "w") as f:
                         f.write(''.join(dialogue_init))
+            return jsonify({"action_class": action, "text": output_text})
+
 
 if __name__ == "__main__":
-    main()
+    app.run(host='0.0.0.0', port=5000)
+
+# if __name__ == "__main__":
+#     main()
+
