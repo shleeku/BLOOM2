@@ -1,17 +1,25 @@
-<s> Laura: hey how's it going? </s>
+<s> AI: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Laura: what are you up to? </s>
+<s> AI: what are you up to? </s>
 <s> User: not much </s>
-<s> Laura: that's good to hear </s>
+<s> AI: that's good to hear </s>
 <s> User: hi again </s>
-<s> Laura: hey how's it going? </s>
+<s> AI: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Laura: what are you up to? </s>
+<s> AI: what are you up to? </s>
 <s> User: not much </s>
-<s> Laura: that's good to hear </s>
+<s> AI: that's good to hear </s>
 <s> User: hi again </s>
-<s> Laura: hey how's it going? </s>
+<s> AI: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> Laura: what are you up to? </s>
+<s> AI: what are you up to? </s>
 <s> User: not much </s>
-<s> Laura: that's good to hear </s>
+<s> AI: that's good to hear </s>
+<s> User: Hi </s>
+ AI: how are you? 
+<s> User: I'm fine how are you? </s>
+ AI: you look great 
+<s> User: thanks! </s>
+ AI: how about you? 
+<s> User: you look amazing yourself </s>
+ AI: good to hear 

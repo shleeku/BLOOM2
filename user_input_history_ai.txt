@@ -1,16 +1,8 @@
-<s> User: Hi my name is Evan </s>
+<s> User: Hi </s>
 
-<s> User: good I am a science fiction writer </s>
+<s> User: I'm fine how are you? </s>
 
-<s> User: I love watching western movies </s>
+<s> User: thanks! </s>
 
-<s> User: I love knitting </s>
-
-<s> User: who are you? </s>
-
-<s> User: I am 80 years old </s>
-
-<s> User: who are you? </s>
-
-<s> User: what are you up to? </s>
+<s> User: you look amazing yourself </s>
 

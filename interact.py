@@ -68,7 +68,15 @@ def main():
         f.write("")
 
     friend = "AI"
-    user_id = int(input("User ID: "))
+
+    id_received = False
+    while not id_received:
+        try:
+            user_id = int(input("User ID: "))
+            id_received = True
+        except ValueError:
+            print("Please enter an integer.")
+    # user_id = int(input("User ID: "))
 
     flag = True
     while flag:
