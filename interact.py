@@ -189,7 +189,7 @@ def main():
             # --------------SAMPLING------------------------------------------------------------------------------
             found = False
             counter = 0
-            while found == False and counter<50:
+            while found == False and counter<25:
                 counter += 1
                 total_output = model.generate(input_combined.to(device),
                                                                max_length=result_length,

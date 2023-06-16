@@ -2,4 +2,3 @@
 {"user_id": 1154, "name": "Brian", "age": 60, "jobs": [], "hobbies": ["surfing"], "interests": [], "favorite_sports": ["surfing"]}
 {"user_id": 1155, "name": "Greg", "age": 16, "jobs": [], "hobbies": ["surfing"], "interests": [], "favorite_sports": ["surfing"]}
 {"user_id": 1157, "name": "Robert \n \n  ", "age": 23, "jobs": [], "hobbies": ["writing"], "interests": [], "favorite_sports": []}
-

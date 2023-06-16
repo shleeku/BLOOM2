@@ -17,9 +17,3 @@
 <s> AI: that's good to hear </s>
 <s> User: hi </s>
  AI: hey how's it going? 
-<s> User: good </s>
- AI: what are you up to? 
-<s> User: nothing just studying </s>
- AI: that's good to hear 
-<s> User: do you like pancakes? </s>
- AI: yes 
