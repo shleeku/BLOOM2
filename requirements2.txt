@@ -1,0 +1,7 @@
+accelerate==0.20.3
+datasets==2.13.0
+Flask==2.3.2
+matplotlib==3.7.1
+nltk==3.8.1
+spacy==3.5.3
+transformers==4.26.0
