@@ -1,19 +1,21 @@
-<s> AI: hey how's it going? </s>
+<s> Brad: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> AI: what are you up to? </s>
+<s> Brad: what are you up to? </s>
 <s> User: not much </s>
-<s> AI: that's good to hear </s>
+<s> Brad: that's good to hear </s>
 <s> User: hi again </s>
-<s> AI: hey how's it going? </s>
+<s> Brad: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> AI: what are you up to? </s>
+<s> Brad: what are you up to? </s>
 <s> User: not much </s>
-<s> AI: that's good to hear </s>
+<s> Brad: that's good to hear </s>
 <s> User: hi again </s>
-<s> AI: hey how's it going? </s>
+<s> Brad: hey how's it going? </s>
 <s> User: great thanks for asking! </s>
-<s> AI: what are you up to? </s>
+<s> Brad: what are you up to? </s>
 <s> User: not much </s>
-<s> AI: that's good to hear </s>
-<s> User: hi </s>
- AI: hey how's it going? 
+<s> Brad: that's good to hear </s>
+<s> User: hello </s>
+ Brad: hi again 
+<s> User: ey </s>
+ Brad: you got my message?

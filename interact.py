@@ -82,6 +82,12 @@ def main():
     while flag:
         breakout = False
         cont = input("Input: ")
+        words = cont.split()
+        greetings = ["hallo", "hullo", "lo", "ol"]
+        for i in range(len(words)):
+            if words[i] in greetings:
+                words[i] = "hello"
+        cont = " ".join(words)
         cont = "<s> User: " + cont + " </s>\n"
 
         names = ["Brad", "Jenny", "Jimmy", "John", "Laura", "Tyler", "Sky",  "Lizzie", "Alice"]
