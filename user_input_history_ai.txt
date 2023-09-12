@@ -1,6 +1,16 @@
-<s> User: hello </s>
+<s> User: hi </s>
 
-<s> User: hello </s>
+<s> User: i am so good </s>
 
-<s> User: ey </s>
+<s> User: no, do you? </s>
+
+<s> User: yea I'm a student at Korea university </s>
+
+<s> User: i want to work at a company called BEN </s>
+
+<s> User: it is an AI company </s>
+
+<s> User: i like to sing </s>
+
+<s> User: no i'm a bit shy </s>
 

@@ -3,17 +3,21 @@ import torch
 import transformers
 from transformers import BloomForCausalLM
 from transformers import BloomTokenizerFast
-from transformers import AutoTokenizer, AutoModelForCausalLM
+from transformers import AutoTokenizer, AutoModelForCausalLM, AutoModel
 from datasets import load_dataset
 from User_profile_detector import extract_user_info
 from User_profile_detector import save_user_history
-
+from huggingface_hub import login
 from transformers import pipeline
 from matplotlib import pyplot as plt
 import pandas as pd
 from User_profile_detector import write_user_info
 from User_profile_detector import convert_user_info_to_sentences
 from User_profile_detector import write_sentence_to_file
+from llama_cpp import Llama
+from transformers import LlamaForCausalLM, LlamaTokenizer
+
+
 
 def main():
 
@@ -23,19 +27,65 @@ def main():
         level=logging.INFO,
     )
     logger = logging.getLogger(__name__)
+    logger.propagate = False
 
     logger.info("Initializing model")
     torch.cuda.empty_cache()
 
     # device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
     device = torch.device("cuda:0")
+    # device = torch.device("cpu")
 
-    ### BLOOM ### 560m 1b1 1b7 3b 7b1
-    data_dir="/mldata2/cache/transformers/bloom/"
-    # checkpoint = "bigscience/bloom-7b1"
-    checkpoint = "bigscience/bloom-3b"
-    model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto").to(device)
-    tokenizer = BloomTokenizerFast.from_pretrained(checkpoint, cache_dir=data_dir)
+    # ### BLOOM ### 560m 1b1 1b7 3b 7b1
+    # data_dir="/mldata2/cache/transformers/bloom/"
+    # # checkpoint = "bigscience/bloom-7b1"
+    # checkpoint = "bigscience/bloom-3b"
+    # model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto").to(device)
+    # # model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
+    # tokenizer = BloomTokenizerFast.from_pretrained(checkpoint, cache_dir=data_dir)
+
+
+    # # ### LLAMA 2 ###
+    # login()
+    # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_fast=True)
+    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf").to(device)
+    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", device_map="auto")
+    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", device_map="auto", load_in_4bit=True, torch_dtype=torch.float32)
+    # tokenizer = AutoTokenizer.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ")
+    # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ").to(device)
+
+    ### LLAMA 2 C++ ###
+    # tokenizer = AutoTokenizer.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ", use_fast=True)
+    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ", device_map="auto")
+    #
+    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ", device_map="auto")
+    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ", device_map="auto").to(device)
+    # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ").to(device)
+    #
+    # # model_name_or_path = "TheBloke/Llama-2-7b-Chat-GPTQ"
+    # # # To use a different branch, change revision
+    # # # For example: revision="gptq-4bit-64g-actorder_True"
+    # # model = AutoModelForCausalLM.from_pretrained(model_name_or_path,
+    # #                                              torch_dtype=torch.float16,
+    # #                                              device_map="auto",
+    # #                                              revision="main").to(device)
+    # # tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=True)
+    #
+    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ").to(device)
+    # # for param in model.parameters():
+    # #     print(param.device)
+    #
+    # # checkpoint = "/mldata2/cache/transformers/llama/hf/7B"
+    # # model = LlamaForCausalLM.from_pretrained(checkpoint).to(device)
+    # # # model.config.max_position_embeddings = 64
+    # # tokenizer = LlamaTokenizer.from_pretrained(checkpoint)
+
+    ### LLAMA 2 GGUF ###
+
+    tokenizer = AutoTokenizer.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ", use_fast=True)
+    # llm = Llama(model_path="/mldata2/cache/transformers/llama2/llama-2-7b-chat.Q4_K_M.gguf", verbose=True, n_gpu_layers=100)
+    llm = Llama(model_path="/mldata2/cache/transformers/llama2/llama-2-7b-chat.Q4_K_M.gguf", verbose=False,
+                n_ctx=2048, n_batch=1024, n_gpu_layers=100)
 
 
     # ### DOLLY ###
@@ -47,8 +97,15 @@ def main():
 
     # ### VICUNA ###
     # data_dir="/mldata2/cache/transformers/vicuna/"
-    # checkpoint = "lmsys/vicuna-13b-delta-v0"
-    # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir)
+    # # checkpoint = "lmsys/vicuna-13b-delta-v0"
+    # checkpoint = "lmsys/vicuna-7b-v1.3"
+    # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
+    # tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir=data_dir)
+
+    ## VICUNA (BLOKE) ###
+    # data_dir="/mldata2/cache/transformers/vicuna/"
+    # checkpoint = "TheBloke/wizardLM-7B-GPTQ"
+    # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
     # tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir=data_dir)
 
     with open('context_init.txt') as f:
@@ -197,22 +254,37 @@ def main():
             counter = 0
             while found == False and counter<25:
                 counter += 1
-                total_output = model.generate(input_combined.to(device),
-                                                               max_length=result_length,
-                                                               do_sample=True,
-                                                               # top_k=50,
-                                                               # top_p=0.8,
-                                                               top_k=100,
-                                                               top_p=0.70,
-                                                               # max_time=6.0,
-                                                               num_return_sequences=1,
-                                                                temperature=0.8,
-                                              # attention_mask=torch.tensor([1]*len(input_combined[0])).unsqueeze(0).to(device),
-                                                               )
+                # input_combined = input_combined.to(torch.float32)
+                # input_ids = tokenizer(prompt_template, return_tensors='pt').input_ids.cuda()
 
+                ### HF LLM ###
+                # total_output = model.generate(
+                #                             input_combined.to(device=device),
+                #                               # input_combined.to(torch.float32),
+                #                                                max_length=result_length,
+                #                                                do_sample=True,
+                #                                                # top_k=50,
+                #                                                # top_p=0.8,
+                #                                                top_k=100,
+                #                                                top_p=0.70,
+                #                                                # max_time=6.0,
+                #                                                num_return_sequences=1,
+                #                                                 temperature=0.8,
+                #                               # attention_mask=torch.tensor([1]*len(input_combined[0])).unsqueeze(0).to(device),
+                #                                                )
+                #
+                # output_sequences = []
+                # for sequence in total_output:
+                #     output_sequences.append(tokenizer.decode(sequence, skip_special_tokens=True))
+
+                ### GGUF LLM ###
                 output_sequences = []
-                for sequence in total_output:
-                    output_sequences.append(tokenizer.decode(sequence, skip_special_tokens=True))
+                llm_output = llm("\n".join([prompt_context, prompt_dialogue]), max_tokens=100, stop=["Q:", "\n"],
+                             echo=True)
+                for i in range(len(llm_output['choices'])):
+                    output_sequences.append(llm_output['choices'][i]['text'])
+
+                # print(output['choices'][0]['text'])
 
                 generations = []
                 for i in output_sequences:
@@ -242,17 +314,18 @@ def main():
                 output_text = output_list[-1]
             if output_list[-1][-4:] == "</s>":
                 output_text = output_text[:-4]
-            print(output_text)
+            print(output_text.strip())
 
             # --------------ACTION------------------------------------------------------------------------------
             action = ""
-            if "hi" in output_text.lower() or "hello" in output_text.lower() or "bye" in output_text.lower() or "hey" in output_text.lower():
+            if "hi" in output_text.lower().split() or "hello" in output_text.lower().split() or "bye" in output_text.lower().split() or "hey" in output_text.lower().split()\
+                    or "hi!" in output_text.lower().split() or "hello!" in output_text.lower().split() or "bye!" in output_text.lower().split() or "hey!" in output_text.lower().split():
                 action = "handwave"
-            elif "yes" in output_text.lower() or "correct" in output_text.lower():
+            elif "yes" in output_text.lower().split() or "correct" in output_text.lower().split() or "yea" in output_text.lower().split() or "yup" in output_text.lower().split() or "yep" in output_text.lower().split() or "yeah" in output_text.lower().split():
                 action = "nod"
-            elif "no" in output_text.lower() or "wrong" in output_text.lower():
+            elif "no" in output_text.lower().split() or "wrong" in output_text.lower().split():
                 action = "headshake"
-            elif "congratulations" in output_text.lower() or "great!" in output_text.lower():
+            elif "congratulations" in output_text.lower().split() or "great!" in output_text.lower().split():
                 action = "clap"
             if action != "":
                 print("action:", action)
@@ -271,6 +344,7 @@ def main():
             preds = classifier(chatbot_text, top_k=None)
             # preds = classifier(chatbot_text, return_all_scores=True)
             top_pred = classifier(chatbot_text, top_k=1)
+            # print("input to emotion:", chatbot_text)
             print("chatbot emotion:", top_pred[0]["label"])
 
             preds_df = pd.DataFrame(preds)
