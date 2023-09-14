@@ -36,77 +36,19 @@ def main():
     device = torch.device("cuda:0")
     # device = torch.device("cpu")
 
-    # ### BLOOM ### 560m 1b1 1b7 3b 7b1
-    # data_dir="/mldata2/cache/transformers/bloom/"
-    # # checkpoint = "bigscience/bloom-7b1"
-    # checkpoint = "bigscience/bloom-3b"
-    # model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto").to(device)
-    # # model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
-    # tokenizer = BloomTokenizerFast.from_pretrained(checkpoint, cache_dir=data_dir)
-
-
-    # # ### LLAMA 2 ###
-    # login()
-    # tokenizer = AutoTokenizer.from_pretrained("meta-llama/Llama-2-7b-chat-hf", use_fast=True)
-    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf").to(device)
-    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", device_map="auto")
-    # model = AutoModelForCausalLM.from_pretrained("meta-llama/Llama-2-7b-chat-hf", device_map="auto", load_in_4bit=True, torch_dtype=torch.float32)
-    # tokenizer = AutoTokenizer.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ")
-    # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ").to(device)
-
-    ### LLAMA 2 C++ ###
-    # tokenizer = AutoTokenizer.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ", use_fast=True)
-    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ", device_map="auto")
-    #
-    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ", device_map="auto")
-    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ", device_map="auto").to(device)
-    # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-7b-Chat-GPTQ").to(device)
-    #
-    # # model_name_or_path = "TheBloke/Llama-2-7b-Chat-GPTQ"
-    # # # To use a different branch, change revision
-    # # # For example: revision="gptq-4bit-64g-actorder_True"
-    # # model = AutoModelForCausalLM.from_pretrained(model_name_or_path,
-    # #                                              torch_dtype=torch.float16,
-    # #                                              device_map="auto",
-    # #                                              revision="main").to(device)
-    # # tokenizer = AutoTokenizer.from_pretrained(model_name_or_path, use_fast=True)
-    #
-    # # model = AutoModelForCausalLM.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ").to(device)
-    # # for param in model.parameters():
-    # #     print(param.device)
-    #
-    # # checkpoint = "/mldata2/cache/transformers/llama/hf/7B"
-    # # model = LlamaForCausalLM.from_pretrained(checkpoint).to(device)
-    # # # model.config.max_position_embeddings = 64
-    # # tokenizer = LlamaTokenizer.from_pretrained(checkpoint)
-
     ### LLAMA 2 GGUF ###
 
     tokenizer = AutoTokenizer.from_pretrained("TheBloke/Llama-2-13B-chat-GPTQ", use_fast=True)
     # llm = Llama(model_path="/mldata2/cache/transformers/llama2/llama-2-7b-chat.Q4_K_M.gguf", verbose=True, n_gpu_layers=100)
-    llm = Llama(model_path="/mldata2/cache/transformers/llama2/llama-2-7b-chat.Q4_K_M.gguf", verbose=False,
+
+    ### 7B
+    # llm = Llama(model_path="/mldata2/cache/transformers/llama2/llama-2-7b-chat.Q4_K_M.gguf", verbose=False,
+    #             n_ctx=2048, n_batch=1024, n_gpu_layers=100)
+
+    ### 13B
+    llm = Llama(model_path="/mldata2/cache/transformers/llama2/llama-2-13b-chat.Q5_K_M.gguf", verbose=False,
                 n_ctx=2048, n_batch=1024, n_gpu_layers=100)
 
-
-    # ### DOLLY ###
-    # data_dir="/mldata2/cache/transformers/dolly/"
-    # checkpoint = "databricks/dolly-v2-3b"
-    # tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir=data_dir)
-    # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto").to(device)
-    # # model.config.pad_token_id = tokenizer.eos_token_id
-
-    # ### VICUNA ###
-    # data_dir="/mldata2/cache/transformers/vicuna/"
-    # # checkpoint = "lmsys/vicuna-13b-delta-v0"
-    # checkpoint = "lmsys/vicuna-7b-v1.3"
-    # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
-    # tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir=data_dir)
-
-    ## VICUNA (BLOKE) ###
-    # data_dir="/mldata2/cache/transformers/vicuna/"
-    # checkpoint = "TheBloke/wizardLM-7B-GPTQ"
-    # model = AutoModelForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir).to(device)
-    # tokenizer = AutoTokenizer.from_pretrained(checkpoint, cache_dir=data_dir)
 
     with open('context_init.txt') as f:
         context_init = f.readlines()
@@ -147,21 +89,23 @@ def main():
         cont = " ".join(words)
         cont = "<s> User: " + cont + " </s>\n"
 
-        names = ["Brad", "Jenny", "Jimmy", "John", "Laura", "Tyler", "Sky",  "Lizzie", "Alice"]
+        names = ["Brad", "Jenny", "Jimmy", "John", "Laura", "Tyler", "Skye",  "Lizzie", "Alice"]
         friend_list = {"Brad": ["weightlifting", "drinking", "partying"],
-        "Sky": ["volleyball", "skiing", "arts and crafts"],
+        "Skye": ["volleyball", "skiing", "arts and crafts"],
         "Lizzie": ["movies", "reading", "going to the beach"],
         "Tyler": ["hanging out", "skateboarding", "surfing"],
         "Jenny": ["writing", "politics", "environmental issues"],
-        "Jimmy": ["rock band", "singing", "philosophy"],
+        "Jimmy": ["rock band", "singing", "philosophy", "singer", "vocalist", "vocals"],
         "Laura": ["knitting", "skydiving", "classical music"],
         "Alice": ["ballet", "jazz music", "opera"],
         "John": ["western movies", "broadway musicals", "history"]}
         young_friends = ["Tyler", "Sky",  "Lizzie"]
         middle_friends = ["Brad", "Jenny", "Jimmy"]
         old_friends = ["Laura", "John", "Alice"]
+        for i in range(len(words)):
+            words[i] = words[i].lower()
         for n in names:
-            if n.lower() in cont.lower() and friend != n:
+            if n.lower() in words and friend != n:
                 breakout = True
                 friend = n
                 with open('context_{}.txt'.format(friend.lower())) as f:
@@ -221,61 +165,11 @@ def main():
                 new_ids = tokenizer.convert_tokens_to_ids(tokenizer.tokenize(new_sentences))
                 ids_combined += new_ids
 
-            input_combined = torch.tensor([ids_combined])
-            # print("\n" + 100 * '-')
-            # print("Output:[Greedy]\n" + 100 * '-')
-            # Greedy
-            # output = tokenizer.decode(model.generate(input_combined.to(device),
-            #                                       max_length=result_length,
-            #                                       # max_time=4.0
-            #                                       )[0])
-
-
-        #     print("\n" + 100 * '-')
-        #     print("Output:[Beam Search]\n" + 100 * '-')
-            # # Beam Search
-            # output = tokenizer.decode(model.generate(input_combined.to(device),
-            #                                       max_length=result_length,
-            #                                       num_beams=2,
-            #                                       # no_repeat_ngram_size=2,
-            #                                       # early_stopping=True,
-            #                                       # max_time=6.0
-            #                                       )[0])
-        #     # print("\n" + 100 * '-')
-        #     # print("Output:[Sampling]\n" + 100 * '-')
-        #     # # Sampling Top-k + Top-p
-
-    #--------------------------------------------------------------------------------------------
-            # dialogue_text = tokenizer.decode(input_combined[0])
-            # print(tokenizer.decode(input_combined[0]))
-            # print(input_combined)
             # --------------SAMPLING------------------------------------------------------------------------------
             found = False
             counter = 0
             while found == False and counter<25:
                 counter += 1
-                # input_combined = input_combined.to(torch.float32)
-                # input_ids = tokenizer(prompt_template, return_tensors='pt').input_ids.cuda()
-
-                ### HF LLM ###
-                # total_output = model.generate(
-                #                             input_combined.to(device=device),
-                #                               # input_combined.to(torch.float32),
-                #                                                max_length=result_length,
-                #                                                do_sample=True,
-                #                                                # top_k=50,
-                #                                                # top_p=0.8,
-                #                                                top_k=100,
-                #                                                top_p=0.70,
-                #                                                # max_time=6.0,
-                #                                                num_return_sequences=1,
-                #                                                 temperature=0.8,
-                #                               # attention_mask=torch.tensor([1]*len(input_combined[0])).unsqueeze(0).to(device),
-                #                                                )
-                #
-                # output_sequences = []
-                # for sequence in total_output:
-                #     output_sequences.append(tokenizer.decode(sequence, skip_special_tokens=True))
 
                 ### GGUF LLM ###
                 output_sequences = []
@@ -351,7 +245,8 @@ def main():
             # preds_df = pd.DataFrame(preds[0])
             # plt.bar(labels, 100 * preds_df["score"], color='C0')
             plt.bar(preds_df["label"], 100 * preds_df["score"], color='C0')
-            plt.title(f'"{chatbot_text}"')
+            plt.rcParams['font.family'] = ['Noto Color Emoji', 'Symbola']
+            plt.title(f'"{chatbot_text}"', family=['sans-serif', 'Noto Color Emoji', 'Symbola'], fontsize=12)
             plt.ylabel("Class probability (%)")
             plt.show()
             # --------------EMOTION------------------------------------------------------------------------------
