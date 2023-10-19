@@ -1,4 +1,4 @@
-# BLOOM chatbot for VIP 701 
+# LLM chatbot for AI avatars
 
 Environment:
 
@@ -9,21 +9,9 @@ Pytorch 2.0.1
 Transformers 4.29.2
 
 
-In "interact.py", change the following directory to choose where you want to save the model/weights:
+In "interact_gguf.py", change the following directory to choose where you saved the model:
 
-data_dir="/mldata2/cache/transformers/bloom/"
-
-and change this to specify which model/size you want to use:
-
-i.e.
-
-checkpoint = "bigscience/bloom-7b1"
-
-checkpoint = "bigscience/bloom-560m"
-
-If the GPU is not working try:
-
-model = BloomForCausalLM.from_pretrained(checkpoint, cache_dir=data_dir, device_map="auto")
+model_path="/mldata2/cache/transformers/llama2/llama-2-13b-chat.Q5_K_M.gguf"
 
 Features:
 
